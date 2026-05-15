@@ -20,6 +20,8 @@ var computerScore = 0
 
 // Round execution
 function playRound(humanChoice, computerChoice) {
+    console.log("Human choose: " + humanChoice)
+    console.log("Computer choose: " + computerChoice)
     if (
         (humanChoice === "Rock" && computerChoice === "Rock") ||
         (humanChoice === "Paper" && computerChoice === "Paper") ||
@@ -29,7 +31,7 @@ function playRound(humanChoice, computerChoice) {
     } else {
         return "One only won"
     }
-    
+
 }
 
 console.log(playRound(getHumanChoice(), getComputerChoice()))

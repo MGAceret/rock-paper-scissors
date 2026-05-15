@@ -1,6 +1,5 @@
-function getComputerChoice() {
-    const option = Math.floor(Math.random(3))
-    return "Computer chooses " + option
+function getComputerChoice(option) {
+    return "Computer chooses " + Math.floor(Math.random() * option)
 }
 
-console.log(getComputerChoice())
+console.log(getComputerChoice(3))

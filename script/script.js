@@ -28,10 +28,17 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice === "Scissors" && computerChoice === "Scissors")
     ) {
         return "Its a draw"
+    } else if (
+            (humanChoice === "Rock" && computerChoice === "Scissors") ||
+            (humanChoice === "Paper" && computerChoice === "Rock") ||
+            (humanChoice === "Scissors" && computerChoice === "Paper")
+    ) {
+        humanScore++
+        return "User wins, Points: " + humanScore
     } else {
-        return "One only won"
+        computerScore++
+        return "Computer wins, Points: " + computerScore
     }
-
 }
 
 console.log(playRound(getHumanChoice(), getComputerChoice()))

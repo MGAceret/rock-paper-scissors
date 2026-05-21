@@ -1,0 +1,41 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.wrapper,
+.score,
+.display,
+.display div {
+    display: flex;
+}
+
+.wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+
+.score {
+    gap: 30px;
+}
+
+.display {
+    gap: 30px;
+}
+
+.display div {
+    flex-direction: column;
+}
+
+.display img {
+    height: 100px;
+    width: 100px;
+    background: gray;
+}
+
+.playerSelection {
+    margin-top: 20px;
+}

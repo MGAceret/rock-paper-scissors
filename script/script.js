@@ -8,9 +8,10 @@ function getComputerChoice() {
 
 
 // User's choice
-function getHumanChoice() {
-    const choice = Number(window.prompt("0 = Rock\n1 = Paper\n2 = Scissors"))
-    return option[choice]
+function getHumanChoice(choice) {
+    // Display once option was chosen
+    const playerOption = document.querySelector(".playerOption");
+    playerOption.src = `images/${choice}.jpg`
 }
 
 
@@ -54,6 +55,3 @@ function playGame() {
 
 console.log(playGame())
 
-// Display once option was chosen
-const playerOption = document.querySelector(".playerOption");
-playerOption.src = "images/rock.jpg"

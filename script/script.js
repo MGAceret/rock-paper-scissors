@@ -53,3 +53,7 @@ function playGame() {
 }
 
 console.log(playGame())
+
+// Display once option was chosen
+const playerOption = document.querySelector(".playerOption");
+playerOption.src = "images/rock.jpg"

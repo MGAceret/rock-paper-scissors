@@ -26,6 +26,7 @@ function playRound(humanChoice) {
     const computerChoice = getComputerChoice();
     console.log("Human choose: " + humanChoice)
     console.log("Computer choose: " + computerChoice)
+
     if (
         (humanChoice === "Rock" && computerChoice === "Rock") ||
         (humanChoice === "Paper" && computerChoice === "Paper") ||
@@ -43,18 +44,19 @@ function playRound(humanChoice) {
         computerScore++
         return "Computer wins, Points: " + computerScore
     }
+
+    if (humanScore === 5 || computerScore === 5) {
+        document.querySelectorAll("button").forEach(btn => {
+            btn.disabled = true
+        });
+        return result();
+    }
 }
 
-function playGame() {
-    do {
-        console.log(playRound(getHumanChoice(), getComputerChoice()));
-    } while (humanScore < 5 && computerScore < 5);
+function result() {
     if (humanScore === 5) {
         return "User wins!\n" + "Standing: " + humanScore + " - " + computerScore 
     } else {
         return "Computer wins!\n" + "Standing: " + humanScore + " - " + computerScore
     }
 }
-
-
-

@@ -20,7 +20,8 @@ var humanScore = 0
 var computerScore = 0
 
 // Round execution
-function playRound(humanChoice, computerChoice) {
+function playRound(humanChoice) {
+    const computerChoice = getComputerChoice();
     console.log("Human choose: " + humanChoice)
     console.log("Computer choose: " + computerChoice)
     if (
@@ -53,5 +54,5 @@ function playGame() {
     }
 }
 
-console.log(playGame())
+
 

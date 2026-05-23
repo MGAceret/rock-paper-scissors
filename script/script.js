@@ -2,16 +2,17 @@ var option = ["Rock", "Paper", "Scissors"]
 // Opponent's choice
 function getComputerChoice() {
     const choice = Math.floor(Math.random() * 3)
+    // Display once option was chosen
+    document.querySelector(".opponentOption").src = `images/${option[choice]}.jpg`
     // Translating values into string (RPS)
-    return option[choice]
+    return option[choice] 
 }
 
 
 // User's choice
 function getHumanChoice(choice) {
     // Display once option was chosen
-    const playerOption = document.querySelector(".playerOption");
-    playerOption.src = `images/${choice}.jpg`
+    document.querySelector(".playerOption").src = `images/${choice}.jpg`
 }
 
 
@@ -21,6 +22,7 @@ var computerScore = 0
 
 // Round execution
 function playRound(humanChoice) {
+    getHumanChoice(humanChoice);
     const computerChoice = getComputerChoice();
     console.log("Human choose: " + humanChoice)
     console.log("Computer choose: " + computerChoice)

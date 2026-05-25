@@ -39,9 +39,13 @@ function playRound(humanChoice) {
             (humanChoice === "Scissors" && computerChoice === "Paper")
     ) {
         humanScore++
+        document.querySelector(".playerScore").textContent = 
+        humanScore;
         return "User wins, Points: " + humanScore
     } else {
         computerScore++
+        document.querySelector(".opponentScore").textContent = 
+        computerScore;
         return "Computer wins, Points: " + computerScore
     }
 

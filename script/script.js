@@ -32,7 +32,7 @@ function playRound(humanChoice) {
         (humanChoice === "Paper" && computerChoice === "Paper") ||
         (humanChoice === "Scissors" && computerChoice === "Scissors")
     ) {
-        return "Its a draw"
+        console.log("Its a draw")
     } else if (
             (humanChoice === "Rock" && computerChoice === "Scissors") ||
             (humanChoice === "Paper" && computerChoice === "Rock") ||
@@ -41,19 +41,19 @@ function playRound(humanChoice) {
         humanScore++
         document.querySelector(".playerScore").textContent = 
         humanScore;
-        return "User wins, Points: " + humanScore
+        console.log("User wins, Points: " + humanScore)
     } else {
         computerScore++
         document.querySelector(".opponentScore").textContent = 
         computerScore;
-        return "Computer wins, Points: " + computerScore
+        console.log("Computer wins, Points: " + computerScore)
     }
 
     if (humanScore === 5 || computerScore === 5) {
         document.querySelectorAll("button").forEach(btn => {
             btn.disabled = true
         });
-        return result();
+        console.log(result());
     }
 }
 

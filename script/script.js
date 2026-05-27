@@ -58,9 +58,13 @@ function playRound(humanChoice) {
 }
 
 function result() {
+    let resultText = "";
     if (humanScore === 5) {
-        return "User wins!\n" + "Standing: " + humanScore + " - " + computerScore 
+        resultText = "User wins!\n" + "Standing: " + humanScore + " - " + computerScore;
     } else {
-        return "Computer wins!\n" + "Standing: " + humanScore + " - " + computerScore
+        resultText = "Computer wins!\n" + "Standing: " + humanScore + " - " + computerScore;
     }
+    document.querySelector(".gameResult").textContent = 
+    resultText;
+    return resultText;
 }
